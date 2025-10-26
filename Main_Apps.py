@@ -393,7 +393,11 @@ with tab6:
                  success, result_message = send_contact_email(name, email, message)
                  if success:
                      st.session_state.contact_submissions += 1
-                     st.success(f"Thank you {name}! Your message has been sent successfully via email. I'll get back
+                   st.success(
+    f"Thank you {name}! Your message has been sent successfully via email. "
+    f"I'll get back to you at {email} soon."
+)
+
                  else:
                      st.error(f"Failed to send message: {result_message}")
                      if "incomplete" in result_message.lower():
@@ -432,4 +436,5 @@ st.markdown("""
          &lt;p&gt;© 2025 John Doe. Built with Python &amp; Streamlit&lt;/p&gt;
     &lt;/div&gt;
 """, unsafe_allow_html=True)
+
 
