@@ -393,11 +393,11 @@ with tab6:
                  success, result_message = send_contact_email(name, email, message)
                  if success:
                      st.session_state.contact_submissions += 1
-                     st.success(f'Thank you {name}! Your message has been sent successfully via email. I\'ll get back to you at {email} soon.')
+                     st.success(f"Thank you {name}! Your message has been sent successfully via email. I'll get back
                  else:
                      st.error(f"Failed to send message: {result_message}")
                      if "incomplete" in result_message.lower():
-                         st.info("■ To enable email notifications, configure SMTP environment variables (SMTP_SERVER, SMTP_PORT, SMTP_USERNAME, SMTP_PASSWORD, RECIPIENT_EMAIL).")
+                         st.info("■ To enable email notifications, configure SMTP environment variables (SMTP_SERVER,
                      st.warning("Please contact me directly using the information above.")
              else:
                  st.error("Please fill in all fields before submitting.")
@@ -432,8 +432,4 @@ st.markdown("""
          &lt;p&gt;© 2025 John Doe. Built with Python &amp; Streamlit&lt;/p&gt;
     &lt;/div&gt;
 """, unsafe_allow_html=True)
-
 
-
-
-
