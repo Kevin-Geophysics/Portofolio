@@ -397,7 +397,7 @@ with tab6:
                  else:
                      st.error(f"Failed to send message: {result_message}")
                      if "incomplete" in result_message.lower():
-                         st.info("■ To enable email notifications, configure SMTP environment variables (SMTP_SERVER,
+                         st.info("■ To enable email notifications, configure SMTP environment variables (SMTP_SERVER, SMTP_PORT, SMTP_USERNAME, SMTP_PASSWORD, RECIPIENT_EMAIL).")
                      st.warning("Please contact me directly using the information above.")
              else:
                  st.error("Please fill in all fields before submitting.")
@@ -434,5 +434,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
+
 
 
